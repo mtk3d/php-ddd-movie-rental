@@ -1,0 +1,62 @@
+{
+    "name": "munusphp/munus",
+    "type": "library",
+    "description": "Power of object-oriented programming with the elegance of functional programming.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arkadiusz Kondas",
+            "email": "arkadiusz.kondas@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "phpunit/phpunit": "^8.4",
+        "vimeo/psalm": "^3.12",
+        "phpstan/phpstan": "^0.12",
+        "psalm/plugin-phpunit": "^0.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Munus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Munus\\Tests\\": "tests/"
+        }
+    },
+
+    "scripts": {
+        "check-cs": [
+            "php-cs-fixer fix --dry-run --diff"
+        ],
+        "fix-cs": [
+            "php-cs-fixer fix"
+        ],
+        "phpstan": [
+            "phpstan analyse src tests --level=4"
+        ],
+        "psalm": [
+            "psalm --show-info=false"
+        ],
+        "phpunit": [
+            "phpunit --color=always"
+        ],
+        "phpunit-coverage": [
+            "phpunit --coverage-clover 'clover.xml'"
+        ],
+        "coverage-html": [
+            "phpunit --coverage-html coverage"
+        ],
+        "tests": [
+            "@check-cs",
+            "@phpstan",
+            "@psalm",
+            "@phpunit-coverage"
+        ]
+    }
+}

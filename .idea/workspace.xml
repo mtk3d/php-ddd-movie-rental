@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f1ee65-a8f2-444c-8db7-2eb79d6a0c1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Rating/Application/MovieRatingService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rating/Infrastructure/MovieInMemoryRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Rating/Domain/MovieRatingServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/FinalRate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/MovieRated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/MovieRated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/MovieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/MovieRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator/AverageCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator/AverageCalculator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rent/Domain/MovieCopy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rent/Domain/MovieCopy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rent/Domain/Policy/GapBetween.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rent/Domain/Policy/GapBetween.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rent/Domain/Policy/NoOverlapping.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rent/Domain/Policy/NoOverlapping.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared/Result.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Result.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared/Result/Success.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Result/Success.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Rating/Domain/RateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Rating/Domain/RateTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +117,7 @@
       <updated>1598123455084</updated>
       <workItem from="1598123457378" duration="8976000" />
       <workItem from="1598544609012" duration="6445000" />
-      <workItem from="1598689458359" duration="22783000" />
+      <workItem from="1598689458359" duration="22939000" />
     </task>
     <servers />
   </component>

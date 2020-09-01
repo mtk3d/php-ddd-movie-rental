@@ -4,15 +4,20 @@ namespace App\Shared;
 
 use App\Shared\Result\Failure;
 use App\Shared\Result\Success;
+use Munus\Collection\GenericList;
 
 abstract class Result
 {
     /**
-     * @param DomainEvent[] $events
+     * @param GenericList<DomainEvent> $events
      * @return Success
      */
-    public static function success(array $events = []): Success
+    public static function success(GenericList $events = null): Success
     {
+        if ($events == null) {
+            $events = GenericList::empty();
+        }
+
         return new Success($events);
     }
 
@@ -41,14 +46,14 @@ abstract class Result
     }
 
     /**
-     * @return DomainEvent[]
+     * @return GenericList<DomainEvent>
      */
-    public function events(): array
+    public function events(): GenericList
     {
         if ($this instanceof Success) {
             return $this->events;
         }
 
-        return [];
+        return GenericList::empty();
     }
 }

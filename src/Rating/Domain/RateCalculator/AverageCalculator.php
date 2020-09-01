@@ -16,9 +16,9 @@ class AverageCalculator extends RateCalculator
      */
     public function calculateOf(GenericList $rates): Rate
     {
-        $sum = $rates->reduce(function ($value, Rate $rate) {
-            return $rate->sum($value);
-        });
+        $sum = $rates->reduce(
+            fn ($value, Rate $rate) => $rate->sum($value)
+        );
 
         return Rate::of($sum->getValue() / $rates->length());
     }

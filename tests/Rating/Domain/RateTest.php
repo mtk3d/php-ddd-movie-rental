@@ -30,7 +30,7 @@ class RateTest extends TestCase
         $result = $this->movie->rate(Rate::of(5), $this->evaluator);
 
         $this->assertTrue($result->isSuccessful());
-        $this->assertInstanceOf(MovieRated::class, $result->events()[0]);
+        $this->assertInstanceOf(MovieRated::class, $result->events()->head());
     }
 
     public function testMovieRateCalculation()
@@ -47,7 +47,7 @@ class RateTest extends TestCase
         $result = $this->movie->rate(Rate::of(5), $this->evaluator);
 
         //then
-        $this->assertTrue($result->events()[0]->getRate()->isEqual(Rate::of(2.75))); // (1 + 2 + 3 + 5) / 4 = 2.75
+        $this->assertTrue($result->events()->head()->getRate()->isEqual(Rate::of(2.75))); // (1 + 2 + 3 + 5) / 4 = 2.75
     }
 
     public function testChangeRate()
@@ -62,6 +62,6 @@ class RateTest extends TestCase
         $result = $this->movie->rate(Rate::of(4), $this->evaluator);
 
         //then
-        $this->assertTrue($result->events()[0]->getRate()->isEqual(Rate::of(3.5))); // (3 + 4) / 2 = 3.5
+        $this->assertTrue($result->events()->head()->getRate()->isEqual(Rate::of(3.5))); // (3 + 4) / 2 = 3.5
     }
 }

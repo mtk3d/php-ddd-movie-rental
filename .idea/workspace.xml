@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f1ee65-a8f2-444c-8db7-2eb79d6a0c1b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Rating/Application/MovieRatingService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rating/Infrastructure/MovieInMemoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Rating/Domain/MovieRatingServiceTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/FinalRate.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rating/Domain/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/MovieRated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/MovieRated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/MovieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/MovieRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator/AverageCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator/AverageCalculator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rent/Domain/MovieCopy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rent/Domain/MovieCopy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rent/Domain/Policy/GapBetween.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rent/Domain/Policy/GapBetween.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rent/Domain/Policy/NoOverlapping.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rent/Domain/Policy/NoOverlapping.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared/Result.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared/Result/Success.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Result/Success.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Rating/Domain/RateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Rating/Domain/RateTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +132,7 @@
       <updated>1598123455084</updated>
       <workItem from="1598123457378" duration="8976000" />
       <workItem from="1598544609012" duration="6445000" />
-      <workItem from="1598689458359" duration="17169000" />
+      <workItem from="1598689458359" duration="22783000" />
     </task>
     <servers />
   </component>
@@ -139,23 +150,27 @@
     </state>
     <state x="402" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1280.777/-662.-1417.2560.1417@0.23.1280.777" timestamp="1598903805585" />
     <state x="402" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1280.777@0.23.1280.777" timestamp="1598560099259" />
-    <state x="378" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598903826552">
+    <state x="378" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598994797211">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="378" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.777/-662.-1417.2560.1417@0.23.1280.777" timestamp="1598903826552" />
-    <state x="378" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.777@0.23.1280.777" timestamp="1598809087267" />
-    <state x="379" y="235" key="NewPhpClassDialog" timestamp="1598908494093">
+    <state x="378" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.777/-662.-1417.2560.1417@0.23.1280.777" timestamp="1598964868732" />
+    <state x="378" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.777@0.23.1280.777" timestamp="1598994797211" />
+    <state x="379" y="235" key="NewPhpClassDialog" timestamp="1598996701375">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="379" y="235" key="NewPhpClassDialog/0.23.1280.777/-662.-1417.2560.1417@0.23.1280.777" timestamp="1598908494093" />
-    <state x="379" y="235" key="NewPhpClassDialog/0.23.1280.777@0.23.1280.777" timestamp="1598820417734" />
+    <state x="379" y="235" key="NewPhpClassDialog/0.23.1280.777@0.23.1280.777" timestamp="1598996701375" />
     <state x="141" y="50" key="SettingsEditor" timestamp="1598123471129">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1598123471129" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1598808297604">
+    <state x="298" y="173" width="683" height="476" key="find.popup" timestamp="1598995753017">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1598808297604" />
+    <state x="298" y="173" width="683" height="476" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1598995753017" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1598996529085">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1598996529085" />
   </component>
 </project>

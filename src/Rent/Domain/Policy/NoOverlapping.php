@@ -18,9 +18,9 @@ class NoOverlapping implements Policy
      */
     public function isSatisfied(Period $period, GenericList $reservedPeriods): Either
     {
-        $overlapped = $reservedPeriods->filter(function (Period $reservedPeriod) use ($period) {
-            return $reservedPeriod->overlaps($period);
-        });
+        $overlapped = $reservedPeriods->filter(
+            fn (Period $reservedPeriod) => $reservedPeriod->overlaps($period)
+        );
 
         return $overlapped->isEmpty()
             ? new Right(new Allowance())

@@ -15,14 +15,19 @@ class MovieRated implements DomainEvent
      */
     private UUID $id;
     /**
-     * @var FinalRate
+     * @var MovieId
      */
-    private FinalRate $finalRate;
+    private MovieId $movieId;
+    /**
+     * @var Rate
+     */
+    private Rate $rate;
 
-    public function __construct(UUID $id, FinalRate $finalRate)
+    public function __construct(UUID $id, MovieId $movieId, Rate $rate)
     {
         $this->id = $id;
-        $this->finalRate = $finalRate;
+        $this->movieId = $movieId;
+        $this->rate = $rate;
     }
 
     public function eventId(): UUID
@@ -32,6 +37,6 @@ class MovieRated implements DomainEvent
 
     public function getRate(): Rate
     {
-        return $this->finalRate->getRate();
+        return $this->rate;
     }
 }

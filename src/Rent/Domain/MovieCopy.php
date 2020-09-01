@@ -90,15 +90,11 @@ final class MovieCopy
     public function reserve(ClientId $clientId, Period $period, GenericList $policies): Either
     {
         $rejections = $policies
-            ->map(function (Policy $policy) use ($period): Either {
-                return $policy->isSatisfied($period, $this->getReservedPeriods());
-            })
-            ->find(function (Either $either): bool {
-                return $either->isLeft();
-            })
-            ->map(function (Either $either) {
-                return $either->getLeft();
-            });
+            ->map(fn (Policy $policy): Either =>
+                $policy->isSatisfied($period, $this->getReservedPeriods())
+            )
+            ->find(fn (Either $either): bool => $either->isLeft())
+            ->map(fn (Either $either) => $either->getLeft());
 
         if ($rejections->isEmpty()) {
             $rent = new Rent($clientId, $period);
@@ -112,9 +108,9 @@ final class MovieCopy
 
     public function getReservedPeriods(): GenericList
     {
-        return $this->rents->map(function (Rent $rent) {
-            return $rent->getPeriod();
-        });
+        return $this->rents->map(
+            fn (Rent $rent) => $rent->getPeriod()
+        );
     }
 
     /**

@@ -18,9 +18,9 @@ class GapBetween implements Policy
      */
     public function isSatisfied(Period $period, GenericList $reservedPeriods): Either
     {
-        $touched = $reservedPeriods->filter(function (Period $reservedPeriod) use ($period) {
-            return $reservedPeriod->abuts($period);
-        });
+        $touched = $reservedPeriods->filter(
+            fn (Period $reservedPeriod) => $reservedPeriod->abuts($period)
+        );
 
         return $reservedPeriods->isEmpty() || $touched->length() >= 1
             ? new Right(new Allowance())

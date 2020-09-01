@@ -5,19 +5,20 @@ namespace App\Shared\Result;
 
 use App\Shared\DomainEvent;
 use App\Shared\Result;
+use Munus\Collection\GenericList;
 
 final class Success extends Result
 {
     /**
-     * @var DomainEvent[]
+     * @var GenericList<DomainEvent>
      */
-    protected $events;
+    protected GenericList $events;
 
     /**
-     * @param DomainEvent[] $events
+     * @param GenericList<DomainEvent> $events
      */
-    public function __construct(array $events)
+    public function __construct(GenericList $events)
     {
-        $this->events = array_map(function (DomainEvent $event): DomainEvent {return  $event; }, $events);
+        $this->events = $events;
     }
 }

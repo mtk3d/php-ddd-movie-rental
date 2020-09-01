@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f1ee65-a8f2-444c-8db7-2eb79d6a0c1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/Movie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator/AverageCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating/Domain/RateCalculator/AverageCalculator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Rating/Domain/RateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Rating/Domain/RateTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +121,7 @@
       <updated>1598123455084</updated>
       <workItem from="1598123457378" duration="8976000" />
       <workItem from="1598544609012" duration="6445000" />
-      <workItem from="1598689458359" duration="16022000" />
+      <workItem from="1598689458359" duration="17169000" />
     </task>
     <servers />
   </component>

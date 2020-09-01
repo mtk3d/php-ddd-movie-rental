@@ -4,13 +4,19 @@
 namespace App\Rating\Domain;
 
 
+use App\Rating\Domain\RateCalculator\AverageCalculator;
 use Munus\Collection\GenericList;
 
-interface RateCalculator
+abstract class RateCalculator
 {
     /**
      * @param GenericList<Rate> $rates
      * @return Rate
      */
-    public function calculateOf(GenericList $rates): Rate;
+    public abstract function calculateOf(GenericList $rates): Rate;
+
+    public static function average(GenericList $rates): Rate
+    {
+        return (new AverageCalculator())->calculateOf($rates);
+    }
 }

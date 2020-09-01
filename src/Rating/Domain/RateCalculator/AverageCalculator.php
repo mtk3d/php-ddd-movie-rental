@@ -8,7 +8,7 @@ use App\Rating\Domain\Rate;
 use App\Rating\Domain\RateCalculator;
 use Munus\Collection\GenericList;
 
-class AverageCalculator implements RateCalculator
+class AverageCalculator extends RateCalculator
 {
     /**
      * @param GenericList<Rate> $rates

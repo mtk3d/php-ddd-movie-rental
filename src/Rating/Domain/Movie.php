@@ -36,7 +36,7 @@ class Movie
         return new Movie($movieId, GenericList::empty());
     }
 
-    public function rate(Rate $rate, Evaluator $evaluator, RateCalculator $rateCalculator): Result
+    public function rate(Rate $rate, Evaluator $evaluator): Result
     {
         $this->usersRates = $this->usersRates->filterNot(function (UserRate $rate) use ($evaluator) {
             return $rate->isOwnedBy($evaluator);
@@ -48,7 +48,7 @@ class Movie
             return $userRate->getRate();
         });
 
-        $calculatedRate = $rateCalculator->calculateOf($rates);
+        $calculatedRate = RateCalculator::average($rates);
 
         $events = [ new MovieRated(UUID::random(), FinalRate::of($this->movieId, $calculatedRate)) ];
 

@@ -31,6 +31,8 @@ class MovieRatingService
             ->getOrElseTry(fn () => Movie::of($movieId))
             ->rate($rate, Evaluator::of($clientId));
 
+        $this->movieRepository->save($movie);
+
         return Result::success();
     }
 }

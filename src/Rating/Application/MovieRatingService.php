@@ -39,6 +39,10 @@ class MovieRatingService
 
         $result = $movie->rate($rate, Evaluator::of($clientId));
 
+        if ($result->isFailure()) {
+            return $result;
+        }
+
         $result->events()->forEach(
             fn (DomainEvent $event) => $this->eventPublisher->publish($event)
         );

@@ -29,11 +29,6 @@ class Rate
         return new Rate($rate);
     }
 
-    public function sum(Rate $rate): Rate
-    {
-        return new Rate($this->rate + $rate->getValue());
-    }
-
     public function isEqual(Rate $rate): bool
     {
         return $rate->getValue() == $this->rate;

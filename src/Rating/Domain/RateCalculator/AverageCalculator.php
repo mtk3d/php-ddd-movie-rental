@@ -7,19 +7,20 @@ namespace App\Rating\Domain\RateCalculator;
 use App\Rating\Domain\Rate;
 use App\Rating\Domain\RateCalculator;
 use Munus\Collection\GenericList;
+use Munus\Exception\UnsupportedOperationException;
 
 class AverageCalculator extends RateCalculator
 {
     /**
      * @param GenericList<Rate> $rates
      * @return Rate
+     * @throws UnsupportedOperationException
      */
     public function calculateOf(GenericList $rates): Rate
     {
-        $sum = $rates->reduce(
-            fn ($value, Rate $rate) => $rate->sum($value)
-        );
+        $avg = $rates->map(fn (Rate $rate) => $rate->getValue())
+            ->average();
 
-        return Rate::of($sum->getValue() / $rates->length());
+        return Rate::of($avg);
     }
 }

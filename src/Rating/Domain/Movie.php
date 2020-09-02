@@ -8,6 +8,7 @@ use App\Shared\MovieId;
 use App\Shared\Result;
 use App\Shared\UUID;
 use Munus\Collection\GenericList;
+use Munus\Exception\UnsupportedOperationException;
 
 class Movie
 {
@@ -37,11 +38,20 @@ class Movie
         $this->rate = $rate;
     }
 
+    /**
+     * @param MovieId $movieId
+     * @return Movie
+     */
     public static function of(MovieId $movieId): Movie
     {
         return new Movie($movieId, GenericList::empty(), Rate::of(0));
     }
 
+    /**
+     * @param Rate $rate
+     * @param Evaluator $evaluator
+     * @return Result
+     */
     public function rate(Rate $rate, Evaluator $evaluator): Result
     {
         $this->usersRates = $this->usersRates
@@ -54,7 +64,11 @@ class Movie
             fn (UserRate $userRate) => $userRate->getRate()
         );
 
-        $this->rate = RateCalculator::average($rates);
+        try {
+            $this->rate = RateCalculator::average($rates);
+        } catch (UnsupportedOperationException $e) {
+            return Result::failure("Rate average calculation error");
+        }
 
         $movieRated = new MovieRated(UUID::random(), $this->movieId, $this->rate);
 

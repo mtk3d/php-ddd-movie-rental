@@ -6,6 +6,7 @@ namespace App\Rating\Domain;
 
 use App\Rating\Domain\RateCalculator\AverageCalculator;
 use Munus\Collection\GenericList;
+use Munus\Exception\UnsupportedOperationException;
 
 abstract class RateCalculator
 {
@@ -15,6 +16,11 @@ abstract class RateCalculator
      */
     public abstract function calculateOf(GenericList $rates): Rate;
 
+    /**
+     * @param GenericList $rates
+     * @return Rate
+     * @throws UnsupportedOperationException
+     */
     public static function average(GenericList $rates): Rate
     {
         return (new AverageCalculator())->calculateOf($rates);

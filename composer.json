@@ -2,6 +2,7 @@
     "name": "mateuszcholewka/movie-rental",
     "type": "project",
     "require": {
+        "php": ">=7.4.0",
         "munusphp/munus": "^0.2.2",
         "myclabs/php-enum": "^1.7",
         "ramsey/uuid": "^4.1",

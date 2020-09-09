@@ -15,7 +15,7 @@ interface Policy
     /**
      * @param Period $period
      * @param GenericList<Period> $reservedPeriods
-     * @return Either<Allowance, Rejection>
+     * @return Either<Rejection, Allowance>
      */
     public function isSatisfied(Period $period, GenericList $reservedPeriods): Either;
 }

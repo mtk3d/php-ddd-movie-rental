@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => '/Users/mateuszcholewka/Sites/MovieRental/src/Rating/Domain/Movie.php-1599653916',
+   'variableKey' => '/Users/mateuszcholewka/Sites/MovieRental/src/Rating/Domain/Movie.php-1599655613',
    'data' => 
   array (
     '624afccf8d50655aa845d6c7aab5f3f2' => 
@@ -14,6 +14,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',
@@ -40,6 +41,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',
@@ -66,6 +68,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',
@@ -95,6 +98,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',
@@ -122,6 +126,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',
@@ -150,6 +155,32 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
+          'movieid' => 'App\\Shared\\MovieId',
+          'result' => 'App\\Shared\\Result',
+          'uuid' => 'App\\Shared\\UUID',
+          'genericlist' => 'Munus\\Collection\\GenericList',
+          'unsupportedoperationexception' => 'Munus\\Exception\\UnsupportedOperationException',
+        ),
+         'className' => 'App\\Rating\\Domain\\Movie',
+         'functionName' => 'rate',
+         'templateTypeMap' => 
+        PHPStan\Type\Generic\TemplateTypeMap::__set_state(array(
+           'types' => 
+          array (
+          ),
+        )),
+      )),
+    )),
+    'eac7f55f739ba950278007bdf08db9d8' => 
+    PHPStan\PhpDoc\NameScopedPhpDocString::__set_state(array(
+       'phpDocString' => '/** @var GenericList<DomainEvent> $events */',
+       'nameScope' => 
+      PHPStan\Analyser\NameScope::__set_state(array(
+         'namespace' => 'App\\Rating\\Domain',
+         'uses' => 
+        array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',
@@ -176,6 +207,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',

@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php-1599652866',
+   'variableKey' => '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php-1599655592',
    'data' => 
   array (
     '677bd89eed78d63836308296ae8e5595' => 
@@ -15,6 +15,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'clientid' => 'App\\Shared\\ClientId',
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'paymentid' => 'App\\Shared\\PaymentId',
           'result' => 'App\\Shared\\Result',
           'money' => 'Money\\Money',
@@ -41,6 +42,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'clientid' => 'App\\Shared\\ClientId',
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'paymentid' => 'App\\Shared\\PaymentId',
           'result' => 'App\\Shared\\Result',
           'money' => 'Money\\Money',
@@ -67,6 +69,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'clientid' => 'App\\Shared\\ClientId',
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'paymentid' => 'App\\Shared\\PaymentId',
           'result' => 'App\\Shared\\Result',
           'money' => 'Money\\Money',
@@ -93,6 +96,7 @@ return PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'clientid' => 'App\\Shared\\ClientId',
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'paymentid' => 'App\\Shared\\PaymentId',
           'result' => 'App\\Shared\\Result',
           'money' => 'Money\\Money',
@@ -100,6 +104,56 @@ return PHPStan\Cache\CacheItem::__set_state(array(
         ),
          'className' => 'App\\Payment\\Domain\\Payment',
          'functionName' => NULL,
+         'templateTypeMap' => 
+        PHPStan\Type\Generic\TemplateTypeMap::__set_state(array(
+           'types' => 
+          array (
+          ),
+        )),
+      )),
+    )),
+    '6d6c9793ba8838fa13a60fc03509d87c' => 
+    PHPStan\PhpDoc\NameScopedPhpDocString::__set_state(array(
+       'phpDocString' => '/** @var GenericList<DomainEvent> $events */',
+       'nameScope' => 
+      PHPStan\Analyser\NameScope::__set_state(array(
+         'namespace' => 'App\\Payment\\Domain',
+         'uses' => 
+        array (
+          'clientid' => 'App\\Shared\\ClientId',
+          'domainevent' => 'App\\Shared\\DomainEvent',
+          'paymentid' => 'App\\Shared\\PaymentId',
+          'result' => 'App\\Shared\\Result',
+          'money' => 'Money\\Money',
+          'genericlist' => 'Munus\\Collection\\GenericList',
+        ),
+         'className' => 'App\\Payment\\Domain\\Payment',
+         'functionName' => 'pay',
+         'templateTypeMap' => 
+        PHPStan\Type\Generic\TemplateTypeMap::__set_state(array(
+           'types' => 
+          array (
+          ),
+        )),
+      )),
+    )),
+    '4d63b6a6a450965e06c6e88675c15028' => 
+    PHPStan\PhpDoc\NameScopedPhpDocString::__set_state(array(
+       'phpDocString' => '/** @var GenericList<DomainEvent> $events */',
+       'nameScope' => 
+      PHPStan\Analyser\NameScope::__set_state(array(
+         'namespace' => 'App\\Payment\\Domain',
+         'uses' => 
+        array (
+          'clientid' => 'App\\Shared\\ClientId',
+          'domainevent' => 'App\\Shared\\DomainEvent',
+          'paymentid' => 'App\\Shared\\PaymentId',
+          'result' => 'App\\Shared\\Result',
+          'money' => 'Money\\Money',
+          'genericlist' => 'Munus\\Collection\\GenericList',
+        ),
+         'className' => 'App\\Payment\\Domain\\Payment',
+         'functionName' => 'cancel',
          'templateTypeMap' => 
         PHPStan\Type\Generic\TemplateTypeMap::__set_state(array(
            'types' => 

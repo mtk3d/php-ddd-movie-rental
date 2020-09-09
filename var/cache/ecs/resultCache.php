@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1599653644,
+	'lastFullAnalysisTime' => 1599655209,
 	'meta' => array (
   'cacheVersion' => 'v5-exportedNodes',
   'phpstanVersion' => '0.12.42',
@@ -104,98 +104,6 @@ return [
   'level' => '8',
 ),
 	'errorsCallback' => static function (): array { return array (
-  '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php' => 
-  array (
-    0 => 
-    PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $events of static method App\\Shared\\Result::success() expects Munus\\Collection\\GenericList<App\\Shared\\DomainEvent>|null, Munus\\Collection\\GenericList<App\\Payment\\Domain\\PaymentStatusChanged> given.',
-       'file' => '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php',
-       'line' => 57,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 57,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => NULL,
-       'metadata' => 
-      array (
-      ),
-    )),
-    1 => 
-    PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $events of static method App\\Shared\\Result::success() expects Munus\\Collection\\GenericList<App\\Shared\\DomainEvent>|null, Munus\\Collection\\GenericList<App\\Payment\\Domain\\PaymentStatusChanged> given.',
-       'file' => '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php',
-       'line' => 72,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 72,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => NULL,
-       'metadata' => 
-      array (
-      ),
-    )),
-  ),
-  '/Users/mateuszcholewka/Sites/MovieRental/src/Rating/Domain/Movie.php' => 
-  array (
-    0 => 
-    PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $events of static method App\\Shared\\Result::success() expects Munus\\Collection\\GenericList<App\\Shared\\DomainEvent>|null, Munus\\Collection\\GenericList<App\\Rating\\Domain\\MovieRated> given.',
-       'file' => '/Users/mateuszcholewka/Sites/MovieRental/src/Rating/Domain/Movie.php',
-       'line' => 77,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/mateuszcholewka/Sites/MovieRental/src/Rating/Domain/Movie.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 77,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => NULL,
-       'metadata' => 
-      array (
-      ),
-    )),
-  ),
-  '/Users/mateuszcholewka/Sites/MovieRental/src/Rent/Domain/Policy/GapBetween.php' => 
-  array (
-    0 => 
-    PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Return type (Munus\\Control\\Either<App\\Rent\\Domain\\Policy\\Rejection, App\\Rent\\Domain\\Policy\\Allowance>) of method App\\Rent\\Domain\\Policy\\GapBetween::isSatisfied() should be compatible with return type (Munus\\Control\\Either<App\\Rent\\Domain\\Policy\\Allowance, App\\Rent\\Domain\\Policy\\Rejection>) of method App\\Rent\\Domain\\Policy::isSatisfied()',
-       'file' => '/Users/mateuszcholewka/Sites/MovieRental/src/Rent/Domain/Policy/GapBetween.php',
-       'line' => 20,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/mateuszcholewka/Sites/MovieRental/src/Rent/Domain/Policy/GapBetween.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 20,
-       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
-       'identifier' => NULL,
-       'metadata' => 
-      array (
-      ),
-    )),
-  ),
-  '/Users/mateuszcholewka/Sites/MovieRental/src/Rent/Domain/Policy/NoOverlapping.php' => 
-  array (
-    0 => 
-    PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Return type (Munus\\Control\\Either<App\\Rent\\Domain\\Policy\\Rejection, App\\Rent\\Domain\\Policy\\Allowance>) of method App\\Rent\\Domain\\Policy\\NoOverlapping::isSatisfied() should be compatible with return type (Munus\\Control\\Either<App\\Rent\\Domain\\Policy\\Allowance, App\\Rent\\Domain\\Policy\\Rejection>) of method App\\Rent\\Domain\\Policy::isSatisfied()',
-       'file' => '/Users/mateuszcholewka/Sites/MovieRental/src/Rent/Domain/Policy/NoOverlapping.php',
-       'line' => 20,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/mateuszcholewka/Sites/MovieRental/src/Rent/Domain/Policy/NoOverlapping.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 20,
-       'nodeType' => 'PHPStan\\Node\\InClassMethodNode',
-       'identifier' => NULL,
-       'metadata' => 
-      array (
-      ),
-    )),
-  ),
 ); },
 	'dependencies' => array (
   '/Users/mateuszcholewka/Sites/MovieRental/src/Client/Domain/Client.php' => 
@@ -271,7 +179,7 @@ return [
   ),
   '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php' => 
   array (
-    'fileHash' => '07262ae493cb9f417521ed2dc1bfedf7ac1fcc55',
+    'fileHash' => 'da304e440becafce286fceae985d3bd18e0fa122',
     'dependentFiles' => 
     array (
     ),
@@ -312,7 +220,7 @@ return [
   ),
   '/Users/mateuszcholewka/Sites/MovieRental/src/Rating/Domain/Movie.php' => 
   array (
-    'fileHash' => 'f4662540fad202d647a5ade8e1d665367df8ee03',
+    'fileHash' => 'c452e2de12b6c66cc83d3af3a96ad6a95782d004',
     'dependentFiles' => 
     array (
       0 => '/Users/mateuszcholewka/Sites/MovieRental/src/Rating/Application/MovieRatingService.php',
@@ -423,7 +331,7 @@ return [
   ),
   '/Users/mateuszcholewka/Sites/MovieRental/src/Rent/Domain/Policy.php' => 
   array (
-    'fileHash' => '63c93ce350d53197360f4c7c3d32434f68936434',
+    'fileHash' => 'c89d6c4592d96abe9fcc8ff9d9377ebb328a339c',
     'dependentFiles' => 
     array (
       0 => '/Users/mateuszcholewka/Sites/MovieRental/src/Rent/Domain/MovieCopy.php',
@@ -490,7 +398,7 @@ return [
   ),
   '/Users/mateuszcholewka/Sites/MovieRental/src/Shared/DomainEvent.php' => 
   array (
-    'fileHash' => 'b6e813bf9d21b35052c2422d1dba761c5546878c',
+    'fileHash' => 'ead1e7ea8ad0a137e5ed1865af48ca2f26a1272d',
     'dependentFiles' => 
     array (
       0 => '/Users/mateuszcholewka/Sites/MovieRental/src/Payment/Domain/Payment.php',
@@ -1746,6 +1654,7 @@ return [
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',
@@ -1785,6 +1694,7 @@ return [
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',
@@ -1845,6 +1755,7 @@ return [
          'namespace' => 'App\\Rating\\Domain',
          'uses' => 
         array (
+          'domainevent' => 'App\\Shared\\DomainEvent',
           'movieid' => 'App\\Shared\\MovieId',
           'result' => 'App\\Shared\\Result',
           'uuid' => 'App\\Shared\\UUID',

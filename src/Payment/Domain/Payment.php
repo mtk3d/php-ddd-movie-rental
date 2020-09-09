@@ -5,6 +5,7 @@ namespace App\Payment\Domain;
 
 
 use App\Shared\ClientId;
+use App\Shared\DomainEvent;
 use App\Shared\PaymentId;
 use App\Shared\Result;
 use Money\Money;
@@ -50,6 +51,7 @@ class Payment
 
         $this->status = PaymentStatus::paid();
 
+        /** @var GenericList<DomainEvent> $events */
         $events = GenericList::of(
             PaymentStatusChanged::of($this->id, $this->status)
         );
@@ -65,6 +67,7 @@ class Payment
 
         $this->status = PaymentStatus::cancelled();
 
+        /** @var GenericList<DomainEvent> $events */
         $events = GenericList::of(
             PaymentStatusChanged::of($this->id, $this->status)
         );

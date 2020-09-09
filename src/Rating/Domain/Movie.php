@@ -4,6 +4,7 @@
 namespace App\Rating\Domain;
 
 
+use App\Shared\DomainEvent;
 use App\Shared\MovieId;
 use App\Shared\Result;
 use App\Shared\UUID;
@@ -70,6 +71,7 @@ class Movie
             return Result::failure("Rate average calculation error");
         }
 
+        /** @var GenericList<DomainEvent> $events */
         $events = GenericList::of(
             MovieRated::of($this->movieId, $this->rate)
         );

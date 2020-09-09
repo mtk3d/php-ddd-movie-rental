@@ -3,6 +3,7 @@
 namespace App\Rent\Domain\Policy;
 
 use App\Rent\Domain\Policy;
+use App\Shared\DomainEvent;
 use League\Period\Period;
 use Munus\Collection\GenericList;
 use Munus\Control\Either;
@@ -14,7 +15,7 @@ class GapBetween implements Policy
     /**
      * @param Period $period
      * @param GenericList<Period> $reservedPeriods
-     * @return Either
+     * @return Either<Rejection, Allowance>
      */
     public function isSatisfied(Period $period, GenericList $reservedPeriods): Either
     {
@@ -23,7 +24,7 @@ class GapBetween implements Policy
         );
 
         return $reservedPeriods->isEmpty() || $touched->length() >= 1
-            ? new Right(new Allowance())
-            : new Left(new Rejection('Reservation must abust with previous ones'));
+            ? Either::right(new Allowance())
+            : Either::left(new Rejection('Reservation must abust with previous ones'));
     }
 }

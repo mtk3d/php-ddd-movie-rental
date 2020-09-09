@@ -17,7 +17,7 @@ abstract class RateCalculator
     public abstract function calculateOf(GenericList $rates): Rate;
 
     /**
-     * @param GenericList $rates
+     * @param GenericList<Rate> $rates
      * @return Rate
      * @throws UnsupportedOperationException
      */

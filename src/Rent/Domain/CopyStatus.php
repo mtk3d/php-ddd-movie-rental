@@ -7,6 +7,7 @@ namespace App\Rent\Domain;
 use MyCLabs\Enum\Enum;
 
 /**
+ * @extends Enum<string>
  * @method static CopyStatus available()
  * @method static CopyStatus unavailable()
  */

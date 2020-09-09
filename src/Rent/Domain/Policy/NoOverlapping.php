@@ -3,6 +3,7 @@
 namespace App\Rent\Domain\Policy;
 
 use App\Rent\Domain\Policy;
+use App\Shared\DomainEvent;
 use League\Period\Period;
 use Munus\Collection\GenericList;
 use Munus\Control\Either;
@@ -14,7 +15,7 @@ class NoOverlapping implements Policy
     /**
      * @param Period $period
      * @param GenericList<Period> $reservedPeriods
-     * @return Either
+     * @return Either<Rejection, Allowance>
      */
     public function isSatisfied(Period $period, GenericList $reservedPeriods): Either
     {
@@ -23,7 +24,7 @@ class NoOverlapping implements Policy
         );
 
         return $overlapped->isEmpty()
-            ? new Right(new Allowance())
-            : new Left(new Rejection('Reservation can\'t overlap with previous ones'));
+            ? Either::right(new Allowance())
+            : Either::left(new Rejection('Reservation can\'t overlap with previous ones'));
     }
 }

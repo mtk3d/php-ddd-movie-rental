@@ -1,0 +1,7 @@
+parameters:
+    paths:
+        - src
+        - tests
+    tmpDir: var/cache/ecs
+    level: 8
+    inferPrivatePropertyTypeFromConstructor: true

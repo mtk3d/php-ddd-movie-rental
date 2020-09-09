@@ -9,7 +9,7 @@ final class MovieId
     /**
      * @var UUID
      */
-    private $id;
+    private UUID $id;
 
     public function __construct(UUID $id)
     {

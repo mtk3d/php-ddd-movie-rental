@@ -4,6 +4,7 @@
 namespace App\Rent\Domain;
 
 
+use App\Rent\Domain\Policy\Rejection;
 use App\Shared\ClientId;
 use App\Shared\MovieId;
 use League\Period\Period;
@@ -85,7 +86,7 @@ final class MovieCopy
      * @param ClientId $clientId
      * @param Period $period
      * @param GenericList<Policy> $policies
-     * @return Either
+     * @return Either<GenericList<Rejection>, Rent>
      */
     public function reserve(ClientId $clientId, Period $period, GenericList $policies): Either
     {
@@ -106,6 +107,9 @@ final class MovieCopy
         }
     }
 
+    /**
+     * @return GenericList<Period>
+     */
     public function getReservedPeriods(): GenericList
     {
         return $this->rents->map(

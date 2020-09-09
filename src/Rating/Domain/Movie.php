@@ -55,8 +55,8 @@ class Movie
     public function rate(Rate $rate, Evaluator $evaluator): Result
     {
         $this->usersRates = $this->usersRates
-            ->filterNot(
-                fn (UserRate $rate) => $rate->isOwnedBy($evaluator)
+            ->filter(
+                fn (UserRate $rate) => !$rate->isOwnedBy($evaluator)
             )
             ->append(UserRate::of($rate, $evaluator));
 
@@ -70,9 +70,9 @@ class Movie
             return Result::failure("Rate average calculation error");
         }
 
-        $movieRated = new MovieRated(UUID::random(), $this->movieId, $this->rate);
-
-        $events = GenericList::of($movieRated);
+        $events = GenericList::of(
+            MovieRated::of($this->movieId, $this->rate)
+        );
 
         return Result::success($events);
     }

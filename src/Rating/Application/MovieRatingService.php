@@ -44,7 +44,9 @@ class MovieRatingService
         }
 
         $result->events()->forEach(
-            fn (DomainEvent $event) => $this->eventPublisher->publish($event)
+            function (DomainEvent $event): void {
+                $this->eventPublisher->publish($event);
+            }
         );
 
         $this->movieRepository->save($movie);

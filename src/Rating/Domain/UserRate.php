@@ -3,7 +3,6 @@
 
 namespace App\Rating\Domain;
 
-
 use Webmozart\Assert\Assert;
 
 class UserRate

@@ -3,7 +3,6 @@
 
 namespace App\Movie;
 
-
 class Director
 {
     /**

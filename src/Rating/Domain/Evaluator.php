@@ -3,7 +3,6 @@
 
 namespace App\Rating\Domain;
 
-
 use App\Shared\ClientId;
 
 class Evaluator

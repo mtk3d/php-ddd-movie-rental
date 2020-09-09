@@ -3,7 +3,6 @@
 
 namespace App\Payment\Domain;
 
-
 use App\Shared\ClientId;
 use App\Shared\DomainEvent;
 use App\Shared\PaymentId;

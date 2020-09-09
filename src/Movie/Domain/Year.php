@@ -3,7 +3,6 @@
 
 namespace App\Movie;
 
-
 use Webmozart\Assert\Assert;
 
 class Year

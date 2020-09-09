@@ -3,7 +3,6 @@
 
 namespace App\Rating\Application;
 
-
 use App\Rating\Domain\Evaluator;
 use App\Rating\Domain\Movie;
 use App\Rating\Domain\MovieRepository;

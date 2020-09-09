@@ -3,7 +3,6 @@
 
 namespace App\Tests\Fixtures;
 
-
 use App\Shared\DomainEvent;
 use App\Shared\DomainEventPublisher;
 use Munus\Collection\GenericList;

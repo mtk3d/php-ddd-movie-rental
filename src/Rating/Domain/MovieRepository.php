@@ -3,7 +3,6 @@
 
 namespace App\Rating\Domain;
 
-
 use App\Shared\MovieId;
 use Munus\Control\Option;
 

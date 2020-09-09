@@ -3,7 +3,6 @@
 
 namespace App\Payment\Domain;
 
-
 use MyCLabs\Enum\Enum;
 
 /**

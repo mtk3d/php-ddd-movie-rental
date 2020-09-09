@@ -3,7 +3,6 @@
 
 namespace App\Rating\Domain;
 
-
 use App\Shared\ClientId;
 use App\Shared\MovieId;
 use PHPUnit\Framework\TestCase;
@@ -25,7 +24,7 @@ class RateTest extends TestCase
         $this->evaluator = Evaluator::of(ClientId::newOne());
     }
 
-    public function testMovieRate()
+    public function testMovieRate(): void
     {
         $result = $this->movie->rate(Rate::of(5), $this->evaluator);
 
@@ -33,7 +32,7 @@ class RateTest extends TestCase
         $this->assertInstanceOf(MovieRated::class, $result->events()->head());
     }
 
-    public function testMovieRateCalculation()
+    public function testMovieRateCalculation(): void
     {
         //given
         $evaluator = Evaluator::of(ClientId::newOne());
@@ -50,7 +49,7 @@ class RateTest extends TestCase
         $this->assertTrue($result->events()->head()->getRate()->isEqual(Rate::of(2.75))); // (1 + 2 + 3 + 5) / 4 = 2.75
     }
 
-    public function testChangeRate()
+    public function testChangeRate(): void
     {
         //given
         $evaluator = Evaluator::of(ClientId::newOne());

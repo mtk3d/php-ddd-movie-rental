@@ -3,7 +3,6 @@
 
 namespace App\Shared;
 
-
 final class MovieId
 {
     /**

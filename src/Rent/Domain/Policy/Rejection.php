@@ -3,7 +3,6 @@
 
 namespace App\Rent\Domain\Policy;
 
-
 class Rejection
 {
     /**

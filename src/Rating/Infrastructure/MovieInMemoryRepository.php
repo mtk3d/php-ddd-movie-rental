@@ -3,7 +3,6 @@
 
 namespace App\Rating\Infrastructure;
 
-
 use App\Rating\Domain\Movie;
 use App\Rating\Domain\MovieRepository;
 use App\Shared\MovieId;

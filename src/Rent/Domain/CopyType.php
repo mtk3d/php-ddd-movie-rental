@@ -3,7 +3,6 @@
 
 namespace App\Rent\Domain;
 
-
 use MyCLabs\Enum\Enum;
 
 /**

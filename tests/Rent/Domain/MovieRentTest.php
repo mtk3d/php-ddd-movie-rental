@@ -3,7 +3,6 @@
 
 namespace App\Rent\Domain;
 
-
 use App\Rent\Domain\Policy\NoOverlapping;
 use App\Shared\ClientId;
 use App\Shared\MovieId;
@@ -20,7 +19,7 @@ class MovieRentTest extends TestCase
         $this->movieCopy = MovieCopy::of(MovieCopyId::newOne(), MovieId::newOne(), CopyType::bluray(), CopyStatus::available());
     }
 
-    public function testStandardMovieRent()
+    public function testStandardMovieRent(): void
     {
         $policies = GenericList::of(new NoOverlapping());
         $result = $this->movieCopy->reserve(ClientId::newOne(), Period::after("2020-02-12 12:00", "1 WEEK"), $policies);
@@ -28,7 +27,7 @@ class MovieRentTest extends TestCase
         $this->assertTrue($result->isRight());
     }
 
-    public function testRentUnavailableMovie()
+    public function testRentUnavailableMovie(): void
     {
         $policies = GenericList::of(new NoOverlapping());
         $this->movieCopy->reserve(ClientId::newOne(), Period::after("2020-02-12 12:00", "1 WEEK"), $policies);

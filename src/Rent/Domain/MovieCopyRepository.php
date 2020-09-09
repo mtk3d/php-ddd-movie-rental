@@ -3,7 +3,6 @@
 
 namespace App\Rent\Domain;
 
-
 use DateTimeImmutable;
 use Munus\Control\Either;
 

@@ -3,7 +3,6 @@
 
 namespace App\Rating\Domain;
 
-
 use App\Rating\Infrastructure\MovieInMemoryRepository;
 use App\Rating\Application\MovieRatingService;
 use App\Shared\ClientId;
@@ -44,7 +43,7 @@ class MovieRatingServiceTest extends TestCase
         $this->movieRatingService = new MovieRatingService($this->movieRepository, $this->eventPublisher);
     }
 
-    public function testMovieRate()
+    public function testMovieRate(): void
     {
         $this->movieRatingService->rateMovie($this->movieId, $this->clientId, Rate::of(4));
 

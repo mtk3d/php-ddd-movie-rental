@@ -3,7 +3,6 @@
 
 namespace App\Rent\Domain;
 
-
 use App\Shared\UUID;
 
 final class MovieCopyId

@@ -3,7 +3,6 @@
 
 namespace App\Rent\Domain;
 
-
 use App\Rent\Domain\Policy\Rejection;
 use App\Shared\ClientId;
 use App\Shared\MovieId;
@@ -91,7 +90,8 @@ final class MovieCopy
     public function reserve(ClientId $clientId, Period $period, GenericList $policies): Either
     {
         $rejections = $policies
-            ->map(fn (Policy $policy): Either =>
+            ->map(
+                fn (Policy $policy): Either =>
                 $policy->isSatisfied($period, $this->getReservedPeriods())
             )
             ->find(fn (Either $either): bool => $either->isLeft())

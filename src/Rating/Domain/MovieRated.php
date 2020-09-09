@@ -3,7 +3,6 @@
 
 namespace App\Rating\Domain;
 
-
 use App\Shared\DomainEvent;
 use App\Shared\MovieId;
 use App\Shared\UUID;

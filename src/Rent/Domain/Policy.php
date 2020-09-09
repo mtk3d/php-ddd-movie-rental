@@ -3,7 +3,6 @@
 
 namespace App\Rent\Domain;
 
-
 use App\Rent\Domain\Policy\Allowance;
 use App\Rent\Domain\Policy\Rejection;
 use League\Period\Period;

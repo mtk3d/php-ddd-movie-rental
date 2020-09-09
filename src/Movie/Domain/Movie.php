@@ -3,7 +3,6 @@
 
 namespace App\Movie;
 
-
 use App\Shared\MovieId;
 
 class Movie

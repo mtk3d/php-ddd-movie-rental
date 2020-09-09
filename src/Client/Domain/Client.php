@@ -3,8 +3,6 @@
 
 namespace App\Client;
 
-
 class Client
 {
-
 }

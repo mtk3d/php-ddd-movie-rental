@@ -28,11 +28,6 @@ class Rate
         return new Rate($rate);
     }
 
-    public function isEqual(Rate $rate): bool
-    {
-        return $rate->getValue() == $this->rate;
-    }
-
     public function getValue(): float
     {
         return $this->rate;

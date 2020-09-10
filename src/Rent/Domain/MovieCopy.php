@@ -73,15 +73,6 @@ final class MovieCopy
     }
 
     /**
-     * @param CopyType $type
-     * @return bool
-     */
-    public function isType(CopyType $type): bool
-    {
-        return $this->type->equals($type);
-    }
-
-    /**
      * @param ClientId $clientId
      * @param Period $period
      * @param GenericList<Policy> $policies

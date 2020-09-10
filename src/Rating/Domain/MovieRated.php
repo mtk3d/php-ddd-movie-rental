@@ -38,9 +38,4 @@ class MovieRated implements DomainEvent
     {
         return $this->id;
     }
-
-    public function getRate(): Rate
-    {
-        return $this->rate;
-    }
 }

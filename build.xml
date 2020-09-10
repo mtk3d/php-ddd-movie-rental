@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="MovieRental" default="check">
+    <target name="phpunit">
+        <echo msg="Running unit tests..." />
+        <exec passthru="true" logoutput="true" checkreturn="true" executable="${project.basedir}/vendor/bin/phpunit">
+        </exec>
+    </target>
+
+    <target name="phpstan">
+        <echo msg="Running types checking..." />
+        <exec passthru="true" logoutput="true" checkreturn="true" executable="${project.basedir}/vendor/bin/phpstan">
+            <arg value="analyse" />
+            <arg value="src" />
+            <arg value="tests" />
+        </exec>
+    </target>
+
+    <target name="phpcsfixer">
+        <echo msg="Running code formatting fixer..." />
+        <exec passthru="true" logoutput="true" checkreturn="true" executable="${project.basedir}/vendor/bin/php-cs-fixer">
+            <arg value="fix" />
+            <arg value="src" />
+            <arg value="--rules=@PSR2" />
+            <arg value="--diff" />
+        </exec>
+    </target>
+
+    <target name="check"
+            description="Runs all necessary checks to ensure the code meets defined coding and security standards and generates reports accordingly"
+            depends="phpunit, phpstan, phpcsfixer"/>
+</project>

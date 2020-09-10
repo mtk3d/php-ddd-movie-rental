@@ -73,4 +73,9 @@ class Payment
 
         return Result::success($events);
     }
+
+    public function getId(): PaymentId
+    {
+        return $this->id;
+    }
 }

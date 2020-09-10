@@ -32,10 +32,12 @@ class MovieRatingService
 
     public function rateMovie(MovieId $movieId, ClientId $clientId, Rate $rate): Result
     {
+        /** @var Movie $movie */
         $movie = $this->movieRepository
             ->find($movieId)
             ->getOrElseTry(fn () => Movie::of($movieId));
 
+        /** @var Result $result */
         $result = $movie->rate($rate, Evaluator::of($clientId));
 
         if ($result->isFailure()) {

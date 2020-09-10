@@ -22,7 +22,7 @@ class PaymentStatusChanged implements DomainEvent
      */
     private PaymentStatus $status;
 
-    private function __construct(UUID $id, PaymentId $paymentId, PaymentStatus $status)
+    public function __construct(UUID $id, PaymentId $paymentId, PaymentStatus $status)
     {
         $this->id = $id;
         $this->paymentId = $paymentId;

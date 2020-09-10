@@ -22,7 +22,7 @@ class MovieRated implements DomainEvent
      */
     private Rate $rate;
 
-    private function __construct(UUID $id, MovieId $movieId, Rate $rate)
+    public function __construct(UUID $id, MovieId $movieId, Rate $rate)
     {
         $this->id = $id;
         $this->movieId = $movieId;

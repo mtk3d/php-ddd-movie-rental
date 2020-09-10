@@ -4,6 +4,8 @@
 namespace App\Payment\Domain;
 
 use App\Shared\ClientId;
+use App\Shared\DomainEvent;
+use App\Shared\Result;
 use Money\Money;
 use PHPUnit\Framework\TestCase;
 
@@ -23,31 +25,47 @@ class PaymentTest extends TestCase
 
     public function testPaymentPay(): void
     {
+        /** @var Result $result */
         $result = $this->payment->pay();
 
-        $this->assertEquals(PaymentStatus::paid(), $result->events()->head()->status());
+        /** @var DomainEvent $event */
+        $event = $result->events()->head();
+
+        $this->assertEquals(
+            $event,
+            new PaymentStatusChanged($event->eventId(), $this->payment->getId(), PaymentStatus::paid())
+        );
     }
 
     public function testPaymentCancel(): void
     {
+        /** @var Result $result */
         $result = $this->payment->cancel();
 
-        $this->assertEquals(PaymentStatus::cancelled(), $result->events()->head()->status());
+        /** @var DomainEvent $event */
+        $event = $result->events()->head();
+
+        $this->assertEquals(
+            $event,
+            new PaymentStatusChanged($event->eventId(), $this->payment->getId(), PaymentStatus::cancelled())
+        );
     }
 
     public function testPayCancelledPayment(): void
     {
         $this->payment->cancel();
+        /** @var Result $result */
         $result = $this->payment->pay();
 
-        $this->assertEquals("Cannot pay this payment", $result->reason());
+        $this->assertTrue($result->isFailure());
     }
 
     public function testCancelledPaidPayment(): void
     {
         $this->payment->pay();
+        /** @var Result $result */
         $result = $this->payment->cancel();
 
-        $this->assertEquals("Cannot cancel this payment", $result->reason());
+        $this->assertTrue($result->isFailure());
     }
 }
